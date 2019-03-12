@@ -7,6 +7,7 @@
         <title>bootstrap-demo</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-bubble.css">
+        <link rel="stylesheet" href="css/animate.css"/>
     </head>
     <body>
         <!-- 导航 -->
@@ -41,7 +42,7 @@
         <section id="home">
             <div class="lvjing">
                 <div class="container">
-                    <div class="row">
+                    <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
                         <div class="col-md-1"></div>
                         <div class="col-md-10">
                             <h1>bootstrap</h1>
@@ -65,7 +66,7 @@
         <!-- bbs -->
         <section id="bbs">
             <div class="container">
-                <div class="row">
+                <div class="row wow fadeInUp" data-wow-duration="0.5s">
                     <div class="col-md-4">
                         <a href="" target="_black">
                             <img src="images/a.png" alt="" class="img-responsive">
@@ -96,13 +97,13 @@
         <!-- html5 -->
         <section id="html5">
             <div class="container">
-                <div class="col-md-6">
+                <div class="col-md-6 wow fadeInLeft">
                     <h2>HTML5前端开发</h2>
                     <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
                     <p><span class="glyphicon glyphicon-sunglasses bubble-icon"></span>前端开发前端开发前端开发前端开发前端开发前端开发前端开发前端开发</p>
                     <p><span class="glyphicon glyphicon-grain bubble-icon"></span>CCCCCCCCCCCCCCCCCCCCCCCCCCCC</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 wow fadeInRight">
                     <img src="images/html5.jpg" class="img-responsive" alt="">
                 </div>
             </div>
@@ -110,7 +111,7 @@
         <!-- html5 -->
         <!-- bootstrap -->
         <section id="bootstrap">
-                <div class="container">
+                <div class="container wow fadeInUp">
                     <div class="col-md-6">
                             <img src="images/html5.jpg" class="img-responsive" alt="">
                     </div>
@@ -126,7 +127,7 @@
         <!-- course -->
         <section id="course">
             <div class="container">
-                <div class="row">
+                <div class="row wow fadeIn" data-wow-delay="0.6s">
                   <div class="col-md-12">
                       <h2>最新课程</h2>
                   </div>  
@@ -186,7 +187,7 @@
         <!-- app -->
         <section id="app">
             <div class="container">
-                <div class="row">
+                <div class="row wow fadeInUp">
                     <div class="col-md-6">
                         <h2>麦子学院移动APP下载</h2>
                         <p>
@@ -214,7 +215,7 @@
             <div class="lvjing">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 wow fadeInLeft">
                             <h2>
                                 <span class="glyphicon glyphicon-send"></span>
                                 &nbsp;
@@ -241,7 +242,7 @@
                                 </p>
                             </address>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 wow fadeInRight">
                             <form action="#" method="post">
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="您的姓名"/>
@@ -267,5 +268,18 @@
         <!-- contact -->
         <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.singlePageNav.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script>
+            $(function(){
+                $('.nav').singlePageNav({
+                    offset: 70
+                });
+                $('.navbar-collapse a').click(function(){
+                    $('.navbar-collapse').collapse('hide');
+                });
+                new WOW().init();
+            })
+        </script>
     </body>
 </html>
